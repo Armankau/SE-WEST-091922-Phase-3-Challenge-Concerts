@@ -3,7 +3,8 @@ class Venue < ActiveRecord::Base
     has_many :bands, through: :concerts
 
     def concert_on(date)
-       self.concerts.where(date: date).first 
+       self.concerts.where(date: date).first
+        #good
     end
 
     def most_frequent_band
